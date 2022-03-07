@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -22,11 +23,18 @@ public class NewsController {
 private final NewsService service;
 
 @GetMapping("/pat")
+
+//for each pour decomposer les infos, prendre le titre, le texte et la date
 public ModelAndView news() {
+	List<NewsModel> l = service.getAllNews();
+	List<String> send = new ArrayList<>();
+	for (NewsModel a : l){
+		send.add(a.toString());
+
+	}
 	ModelAndView modelAndView = new ModelAndView();
-	System.out.println(service.getAllNews());
 	modelAndView.setViewName("news");
-	modelAndView.addObject("news-data",service.getAllNews());
+	modelAndView.addObject("message",send);
 
 		return modelAndView;
 
