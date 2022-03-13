@@ -12,19 +12,16 @@ public interface NewsRepositorie extends JpaRepository<NewsModel, Long> {
 
     List<NewsModel> findAll();
 
+    List<NewsModel> findByTitleContainingIgnoreCase(String title);
+
+    List<NewsModel> findByTextContainingIgnoreCase(String text);
+
+    List<NewsModel> findByDate(Date date);
+
+
     NewsModel findById(Integer id);
 
     NewsModel findByText(String text);
 
     NewsModel findByTitle(String title);
-
-
-
-    List<NewsModel> findByTitleContainingIgnoreCase(String title);
-
-
-
-    List<NewsModel>findByTextContainingIgnoreCase(String text);
-
-    List<NewsModel>findByDate(Date date);
 }

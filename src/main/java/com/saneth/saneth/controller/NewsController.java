@@ -26,8 +26,17 @@ private final NewsService service;
 
 //for each pour decomposer les infos, prendre le titre, le texte et la date
 public ModelAndView news() {
+
+//version permettant de rechercher une news avec son nom
+//	List<NewsModel> l = service.getbyTitle("");
+
+	
+	//creer la list
 	List<NewsModel> l = service.getAllNews();
+	//creer le contenu de la list
 	List<String> send = new ArrayList<>();
+
+	//pour chaque news, on prend les infos et on les rentrent dans a, l servant d'indicateur pour le nombre d'info
 	for (NewsModel a : l){
 		send.add(a.toString());
 
