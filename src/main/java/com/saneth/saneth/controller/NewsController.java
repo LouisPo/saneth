@@ -29,21 +29,31 @@ public ModelAndView news() {
 
 //version permettant de rechercher une news avec son nom
 //	List<NewsModel> l = service.getbyTitle("");
-
+	//List<NewsModel> l = service.getbyText("");
+	//List<NewsModel> l =service.getbyDate(new Date());
 	
 	//creer la list
 	List<NewsModel> l = service.getAllNews();
 	//creer le contenu de la list
 	List<String> send = new ArrayList<>();
+	List<String> send2= new ArrayList<>();
+	List<String> send3= new ArrayList<>();
 
-	//pour chaque news, on prend les infos et on les rentrent dans a, l servant d'indicateur pour le nombre d'info
+	//pour chaque news, prend les valeurs de toutes les infos puis sont rentrer dans a, l servant d'indicateur pour le nombre d'info
 	for (NewsModel a : l){
-		send.add(a.toString());
+		//on rentre les infos dans send
+		send.add(a.getTitle());
+		send2.add(a.getText());
+		send3.add(a.getDate().toString());
 
 	}
+
+
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("news");
 	modelAndView.addObject("message",send);
+	modelAndView.addObject("message2",send2);
+	modelAndView.addObject("message3",send3);
 
 		return modelAndView;
 
