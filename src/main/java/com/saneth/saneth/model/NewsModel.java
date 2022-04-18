@@ -24,5 +24,5 @@ public class NewsModel {
 	 Integer id;
 	 String text;
 	 String title;
-	 Date date;
+	 String date;
 }

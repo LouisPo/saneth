@@ -3,7 +3,7 @@
       xmlns:th="https://www.thymeleaf.org">
 <head>
     <!-- probleme de chemin-->
-    <link type="text/css" rel="stylesheet" href="../design.css">
+    <link type="text/css" rel="stylesheet" href="design.css">
     <title>Les actualités</title>
     <meta charset="utf-8">
 </head>
@@ -11,21 +11,48 @@
 <body>
 
 
-<h1>Les actualitées</h1>
-
-
-
-<table border="1">
+<table border="1" width="100%">
     <tr>
+        <td width="10%">Logo</td>
+        <td width="25%"></td>
+        <td width="30%"></td>
+        <td width="20%"></td>
+        <td width="15%"></td>
+        <td width="10%" style="text-align: right;"  >Deconnexion</td>
+    </tr><tr>
+<td height="180px"></td>
+</tr>
+    <tr>
+        <td></td>
+        <td>Scénario</td>
+        <td>Lore</td>
+        <td>Schéma</td>
+        <td>Fil d'actualité</td>
+        <td></td>
+    </tr>
+    </tr><tr>
+    <td height="25px"></td>
+</tr>
+    <tr><td></td>
+        <td colspan="4" >Les actualitées</td>
+    </tr>
+    </tr><tr>
+    <td height="25px"></td>
+</tr>
+    <tr>
+        <td></td>
         <td>titre</td>
         <td>contenu</td>
         <td>date de parution</td>
+        <td></td>
 
     </tr>
     <tr>
-        <td th:text="${message}"></td>
+        <td></td>
+        <td th:text="${message}"></br></td>
         <td th:text="${message2}"></td>
         <td th:text="${message3}"></td>
+        <td></td>
     </tr>
 
 </table>

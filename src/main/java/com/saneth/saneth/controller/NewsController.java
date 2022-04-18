@@ -22,6 +22,7 @@ public class NewsController {
 
 private final NewsService service;
 
+
 @GetMapping("/pat")
 
 //for each pour decomposer les infos, prendre le titre, le texte et la date
@@ -40,11 +41,11 @@ public ModelAndView news() {
 	List<String> send3= new ArrayList<>();
 
 	//pour chaque news, prend les valeurs de toutes les infos puis sont rentrer dans a, l servant d'indicateur pour le nombre d'info
-	for (NewsModel a : l){
+	for (int i = 1; i <= 2; i++){
 		//on rentre les infos dans send
-		send.add(a.getTitle());
-		send2.add(a.getText());
-		send3.add(a.getDate().toString());
+		send.add(l.get(i).getTitle());
+		send2.add(l.get(i).getText());
+		send3.add(l.get(i).getDate().toString());
 
 	}
 
