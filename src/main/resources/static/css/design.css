@@ -1,15 +1,59 @@
 body{
-background-color: #2ECCFA;
+background-color: grey;
 
 }
 
-gauche{
-whidth: 20%;
+table{
+background-color: white;
 }
 
-droite{
+.logo{
+width: 10%;
+background-color:green;
+}
+
+.actu{
+width: 10%;
+background-color:yellow;
+font-size:150%;
+}
+
+.schema{
+width:15%;
+background-color:brown;
+font-size:150%;
+}
+
+.titrep{
+font-weight: bold;
+font-size:135%;
+}
+
+
+.scenario{
+width: 20%;
+background-color: red;
+font-size:150%;
+}
+
+
+.lore{
+width:30%;
+background-color: blue;
+font-size:150%;
+}
+
+.deco{
 text-align: right;
+width:10%;
+background-color:orange;
+
 }
 
-centre{
+.espdeuxc{
+height:200px;
+}
+
+.espquatrecinq{
+height:45px;
 }

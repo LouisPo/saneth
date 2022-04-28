@@ -13,28 +13,28 @@
 
 <table border="1" width="100%">
     <tr>
-        <td width="10%">Logo</td>
-        <td width="25%"></td>
-        <td width="30%"></td>
-        <td width="20%"></td>
-        <td width="15%"></td>
-        <td width="10%" style="text-align: right;"  >Deconnexion</td>
+        <td class="logo">Logo</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="deco">Deconnexion</td>
     </tr><tr>
-<td height="180px"></td>
+<td class="espdeuxc"></td>
 </tr>
     <tr>
         <td></td>
-        <td>Scénario</td>
-        <td>Lore</td>
-        <td>Schéma</td>
-        <td>Fil d'actualité</td>
+        <td class="scenario">Scénario</td>
+        <td class="lore">Lore</td>
+        <td class="schema">Schéma</td>
+        <td class="actu">Fil d'actualité</td>
         <td></td>
     </tr>
     </tr><tr>
-    <td height="25px"></td>
+    <td class="espquatrecinq"></td>
 </tr>
     <tr><td></td>
-        <td colspan="4" >Les actualitées</td>
+        <td colspan="4" class="titrep">Les actualitées</td>
     </tr>
     </tr><tr>
     <td height="25px"></td>
@@ -49,11 +49,14 @@
     </tr>
     <tr>
         <td></td>
-        <td th:text="${message}"></br></td>
-        <td th:text="${message2}"></td>
-        <td th:text="${message3}"></td>
+
+        <td th:each="item : ${message}" th:text="${item}"></td>
+        <td th:each="item2 : ${message2}" th:text="${item2}"></td>
+        <td th:each="item3 : ${message3}" th:text="${item3}"></td>
         <td></td>
     </tr>
+
+
 
 </table>
 
