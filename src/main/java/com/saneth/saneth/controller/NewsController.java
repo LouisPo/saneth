@@ -23,7 +23,7 @@ public class NewsController {
 private final NewsService service;
 
 
-@GetMapping("/pat")
+@GetMapping("/news")
 
 //for each pour decomposer les infos, prendre le titre, le texte et la date
 public ModelAndView news() {

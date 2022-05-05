@@ -4,7 +4,7 @@
 <head>
     <!-- probleme de chemin-->
     <link type="text/css" rel="stylesheet" href="design.css">
-    <title>Les actualités</title>
+    <title>Les schemas</title>
     <meta charset="utf-8">
 </head>
 
@@ -20,7 +20,7 @@
         <td></td>
         <td class="deco">Deconnexion</td>
     </tr><tr>
-<td class="espdeuxc"></td>
+    <td class="espdeuxc"></td>
 </tr>
     <tr>
         <td></td>
@@ -34,43 +34,9 @@
     <td class="espquatrecinq"></td>
 </tr>
     <tr><td></td>
-        <td colspan="4" class="titrep">Les actualitées</td>
+        <td colspan="4" class="titrep">Les schemas</td>
     </tr>
     </tr>
-    <tr>
-    <td height="25px"></td>
-</tr>
-    <tr>
-        <td></td>
-        <td>titre</td>
-        <td>contenu</td>
-        <td>date de parution</td>
-        <td></td>
-
-    </tr>
-
-    <tr>
-<td></td>
-        <td th:each="item: ${message}">message 1</td>
-        <td th:utext="${item}"></td>
-
-    </tr>
-
-<tr>
-    <td></td>
-    <td th:each="item2: ${message2}">message 2</td>
-        <td th:utext="${item2}"></td>
-
-</tr>
-
-    <tr>
-<td></td>
-    <td th:each="item3: ${message3}">message 3</td>
-        <td th:utext="${item3}"></td>
-
-    </tr>
-
-
 
 </table>
 
