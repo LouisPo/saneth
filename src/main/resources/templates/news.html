@@ -40,33 +40,32 @@
     <tr>
     <td height="25px"></td>
 </tr>
-    <tr>
-        <td></td>
-        <td>titre</td>
-        <td>contenu</td>
-        <td>date de parution</td>
-        <td></td>
 
-    </tr>
+
+
+
 
     <tr>
 <td></td>
-        <td th:each="item: ${message}">message 1</td>
-        <td th:utext="${item}"></td>
+        <td>titre</td>
+        <td th:each="item : ${message}" th:text="${item}"></td>
+        <td ></td>
 
     </tr>
 
 <tr>
     <td></td>
-    <td th:each="item2: ${message2}">message 2</td>
-        <td th:utext="${item2}"></td>
+    <td>contenu</td>
+    <td th:each="item2 : ${message2}" th:text="${item2}"></td>
+        <td ></td>
 
 </tr>
 
     <tr>
 <td></td>
-    <td th:each="item3: ${message3}">message 3</td>
-        <td th:utext="${item3}"></td>
+        <td>date de parution</td>
+    <td th:each="item3 : ${message3}" th:text="${item3}"></td>
+        <td ></td>
 
     </tr>
 
