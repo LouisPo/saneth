@@ -8,20 +8,17 @@ background-color: white;
 }
 
 .logo{
-width: 10%;
-background-color:green;
+width: 10%;;
 }
 
 .actu{
 width: 10%;
-background-color:yellow;
 font-size:150%;
 }
 
 
 .schema{
 width:15%;
-background-color:brown;
 font-size:150%;
 }
 
@@ -33,22 +30,18 @@ font-size:135%;
 
 .scenario{
 width: 20%;
-background-color: red;
 font-size:150%;
 }
 
 
 .lore{
 width:30%;
-background-color: blue;
 font-size:150%;
 }
 
 .deco{
 text-align: right;
 width:10%;
-background-color:orange;
-
 }
 
 .espdeuxc{

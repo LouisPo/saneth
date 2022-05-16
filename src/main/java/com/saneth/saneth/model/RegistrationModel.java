@@ -27,9 +27,10 @@ public class RegistrationModel {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	 int id;
-	 String name;
-	 String firstname;
-	 String mail;
+	 private int id;
+	 private String name;
+	 private String firstname;
+	 private String mail;
+	 private String mdp;
 
 }
