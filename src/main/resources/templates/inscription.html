@@ -19,32 +19,28 @@
     </tr>
     <tr>
         <td></td>
-        <td>nom:</td>
-        <td><input type="text"></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>prenom:</td>
-        <td><input type="text"></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>mail:</td>
-        <td><input type="text"></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>mot de passe:</td>
-        <td><input type="text"></td>
-    </tr>
 
-    <tr>
-        <td></td>
-        <td></td>
-        <td><input type="submit" value="Valider"/></td>
+        <td>
+    <form th:action="@{/inscription}" method="post" th:object="${user}">
+        <label>nom:</label>
+        <input type="text" th:field="*{name}" /><br/>
+
+        <label>prenom:</label>
+        <input type="text" th:field="*{firstname}" /><br/>
+
+
+        <label>mail:</label>
+        <input type="text" th:field="*{mail}" /><br/>
+
+        <label>mot de passe:</label>
+        <input type="text" th:field="*{mdp}" /><br/>
+
+        <button type="submit">Valider</button>
+
+    </form>
+        </td>
     </tr>
     <tr>
-        <td></td>
         <td></td>
         <td>Si vous êtes déjà inscrit, cliquez <a href="connexion">ici</a></td>
     </tr>
