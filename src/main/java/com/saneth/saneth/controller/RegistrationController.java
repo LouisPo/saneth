@@ -1,6 +1,7 @@
 package com.saneth.saneth.controller;
 
 import com.saneth.saneth.model.RegistrationModel;
+import com.saneth.saneth.services.RegistrationService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -33,13 +34,17 @@ public class RegistrationController {
 }
 
 */
+
+
 @Controller
 public class RegistrationController {
 
+	@Autowired
+	private final RegistrationService registrationService;
 	@GetMapping("/inscription")
 	public String inscription(Model model) {
 		model.addAttribute("user", new RegistrationModel());
-		String sql="INSERT INTO people (firstname, id, mail, name, mdp) VALUES ( ?, ?, ?, ?, ?)";
+
 
 		return "inscription";
 	}
