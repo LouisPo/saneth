@@ -22,6 +22,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(makeFinal = false, level = AccessLevel.PRIVATE)
 @Entity
 
+@Data
 @Table(name = "registration")
 public class RegistrationModel {
 	
