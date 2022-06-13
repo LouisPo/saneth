@@ -46,8 +46,10 @@ public class RegistrationController {
 	public String inscription(Model model) {
 		model.addAttribute("user", new RegistrationModel());
 
+        System.out.println(model);
 
 		return "inscription";
+
 	}
 
 	@PostMapping("/inscription")
