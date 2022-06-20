@@ -40,21 +40,20 @@ public class RegistrationController {
 @Controller
 public class RegistrationController {
 
+@GetMapping("test")
+public String test(){
+	return"test";
+}
 
+	@PostMapping("/inscription")
+	public String inscription(@ModelAttribute("user") RegistrationModel person) {
+		//person.addAttribute("user", new RegistrationModel());
 
-	@GetMapping("/inscription")
-	public String inscription(Model model) {
-		model.addAttribute("user", new RegistrationModel());
-
-        System.out.println(model);
+        System.out.println(person);
 
 		return "inscription";
 
 	}
 
-	@PostMapping("/inscription")
-	public String submissionResult(@ModelAttribute("user") RegistrationModel person) {
-		return "result";
-	}
 
 }
